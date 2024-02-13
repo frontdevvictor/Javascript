@@ -1,2 +1,2 @@
 # Javascript
- Curso de Javascrpit do Crusoemvideo
+ Curso de Javascrpit do Cursoemvideo
