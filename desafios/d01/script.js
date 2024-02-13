@@ -4,14 +4,14 @@ function carregar() {
     var data = new Date()
     var hora = data.getHours()
     msg.innerHTML = `Agora são ${hora} horas.`
-    if (fora >= 0 && hora < 12){
+    if (hora >= 0 && hora < 12){
         // BOM DIA!
-        img.src = Manhã.png
+        img.src = 'Manhã.png'
     } else if (hora >= 12 && hora < 18){
         // BOA TARDE!
-        img.src = Tarde.png
+        img.src = 'Tarde.png'
     } else {
         // BOA NOITE!
-        img.src = Noite.png
+        img.src = 'Noite.png'
     }
 }
