@@ -21,10 +21,10 @@ function inLista(n, lista) {
 
 function adicionar() {
     if(isNumero(num.value) && !inLista(num.value, valores)) {
-        valores.push(Number(num.value))
-        let item = document.createElement('option')
-        item.text = 'Valor ${num.value} adicionado.'
-        lista.appendChild(item)
+        valores.push(Number(num.value));
+        let item = document.createElement('option');
+        item.text = `Valor ${num.value} adicionado.`; // Corrigindo interpolação de string
+        list.appendChild(item); // Corrigindo seletor do elemento select
     } else {
         window.alert('Valor inválido ou já encontrado na lista.');
     }
