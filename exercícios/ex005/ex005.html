@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primeiro passos com DOM</title>
+    <title>Primeiros passos com DOM</title>
     <style>
-        body{
+        body {
             background: rgb(68, 125, 199);
             color: white;
-            font: normal 16pt arial;
+            font: normal 16pt Arial, sans-serif;
         }
     </style>
 </head>
@@ -18,17 +18,23 @@
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
     <div class="msg">Clique em mim</div>
     <script>
-        var corpo = window.document.body
-        var p1 = window.document.getElementsByTagName('p')[1]
+        var corpo = window.document.body;
+        var p1 = window.document.getElementsByTagName('p')[1];
+
+        // Código comentado
         /*
-        var d = window.document.getElementById('msg')
-        d.style.background = 'green'
-        d.innerText = 'Estou aguardando...'
+        var d = window.document.getElementById('msg');
+        d.style.background = 'green';
+        d.innerText = 'Estou aguardando...';
         */
-        var d =window.document.querySelector('div.msg')
-        d.style.background = 'blue'
 
+        var d = window.document.querySelector('div.msg');
+        d.style.background = 'blue';
 
+        // Adicionando evento de clique
+        d.addEventListener('click', function() {
+            d.style.background = d.style.background === 'blue' ? 'green' : 'blue';
+        });
     </script>
 </body>
 </html>
